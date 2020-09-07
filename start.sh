@@ -26,10 +26,10 @@ done
 cd dirname/minecraftbe/servername
 
 # Create backup
-if [ -d "worlds" ]; then
-    echo "Backing up server (to minecraftbe/servername/backups folder)"
-    tar -pzvcf backups/$(date +%Y.%m.%d.%H.%M.%S).tar.gz worlds
-fi
+#if [ -d "worlds" ]; then
+#    echo "Backing up server (to minecraftbe/servername/backups folder)"
+#    tar -pzvcf backups/$(date +%Y.%m.%d.%H.%M.%S).tar.gz worlds
+#fi
 
 # Retrieve latest version of Minecraft Bedrock dedicated server
 echo "Checking for the latest version of Minecraft Bedrock server ..."
