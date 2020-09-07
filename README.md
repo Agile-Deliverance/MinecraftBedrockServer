@@ -3,7 +3,7 @@ Sets up a Minecraft Bedrock dedicated server on Ubuntu / Debian / Raspbian / Arm
 View installation instructions at: https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
 <br>
 To run the installation type:<br>
-wget https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/SetupMinecraft.sh<br>
+wget https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/SetupMinecraft.sh<br>
 chmod +x SetupMinecraft.sh<br>
 ./SetupMinecraft.sh<br>
 <br>

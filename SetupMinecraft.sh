@@ -3,7 +3,7 @@
 #
 # Instructions: https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/
 # To run the setup script use:
-# wget https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/SetupMinecraft.sh
+# wget https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/SetupMinecraft.sh
 # chmod +x SetupMinecraft.sh
 # ./SetupMinecraft.sh
 #
@@ -112,31 +112,31 @@ UserName=ubuntu
 DirName=$(readlink -e ~)
 wget -O "downloads/$DownloadFile" "$DownloadURL"
 unzip -o "downloads/$DownloadFile"
-
+/Agile-Deliverance/MinecraftBedrockServer/master/
 # Download start.sh from repository
 echo "Grabbing start.sh from repository..."
-wget -O start.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/start.sh
+wget -O start.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/start.sh
 chmod +x start.sh
 sed -i "s:dirname:$DirName:g" start.sh
 sed -i "s:servername:$ServerName:g" start.sh
 
 # Download stop.sh from repository
 echo "Grabbing stop.sh from repository..."
-wget -O stop.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/stop.sh
+wget -O stop.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/stop.sh
 chmod +x stop.sh
 sed -i "s:dirname:$DirName:g" stop.sh
 sed -i "s:servername:$ServerName:g" stop.sh
 
 # Download restart.sh from repository
 echo "Grabbing restart.sh from repository..."
-wget -O restart.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/restart.sh
+wget -O restart.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/restart.sh
 chmod +x restart.sh
 sed -i "s:dirname:$DirName:g" restart.sh
 sed -i "s:servername:$ServerName:g" restart.sh
 
 # Service configuration
 echo "Configuring Minecraft $ServerName service..."
-sudo wget -O /etc/systemd/system/$ServerName.service https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/minecraftbe.service
+sudo wget -O /etc/systemd/system/$ServerName.service https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/minecraftbe.service
 sudo chmod +x /etc/systemd/system/$ServerName.service
 sudo sed -i "s/replace/$UserName/g" /etc/systemd/system/$ServerName.service
 sudo sed -i "s:dirname:$DirName:g" /etc/systemd/system/$ServerName.service
