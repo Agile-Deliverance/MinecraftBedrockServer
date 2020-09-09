@@ -136,7 +136,7 @@ sed -i "s:servername:$ServerName:g" restart.sh
 
 # Download checkIdleTime.sh from repository
 echo "Grabbing idle timer script from repository..."
-wget -0 checkIdleTime.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/checkIdleTime.sh
+wget -O checkIdleTime.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/checkIdleTime.sh
 chmod +x checkIdleTime.sh
 
 # Service configuration
