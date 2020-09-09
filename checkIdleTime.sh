@@ -10,10 +10,10 @@ then
     if [ ! -f /home/ubuntu/idleSince ]; then
         date +%s > /home/ubuntu/idleSince
     fi
-    echo $((`date +%s` - `cat /home/ubuntu/idleSince`))
+    echo $((`date +%s` - `cat /home/ubuntu/idleSince`)) > /home/ubuntu/idleSeconds
 else
     if [ -f /home/ubuntu/idleSince ]; then
         rm /home/ubuntu/idleSince
     fi
-    echo 0
+    echo 0 > /home/ubuntu/idleSeconds
 fi
