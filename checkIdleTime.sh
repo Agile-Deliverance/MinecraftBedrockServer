@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo -u ubuntu screen -r Birchverse -p0 -X stuff "list"
-sudo -u ubuntu screen -r Birchverse -p0 -X eval "stuff \015"
+sudo -u ubuntu screen -r BlingMyMc -p0 -X stuff "list"
+sudo -u ubuntu screen -r BlingMyMc -p0 -X eval "stuff \015"
 sleep 0.5
-sudo -u ubuntu screen -r Birchverse -p0 -X hardcopy -h /home/ubuntu/screen.log
+sudo -u ubuntu screen -r BlingMyMc -p0 -X hardcopy -h /home/ubuntu/screen.log
 
 players=$(grep "players online" /home/ubuntu/screen.log |tail -n 1)
 regex="There are 0"
