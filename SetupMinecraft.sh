@@ -134,6 +134,11 @@ chmod +x restart.sh
 sed -i "s:dirname:$DirName:g" restart.sh
 sed -i "s:servername:$ServerName:g" restart.sh
 
+# Download checkIdleTime.sh from repository
+echo "Grabbing idle timer script from repository..."
+wget -0 checkIdleTime.sh https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/checkIdleTime.sh
+chmod +x checkIdleTime.sh
+
 # Service configuration
 echo "Configuring Minecraft $ServerName service..."
 sudo wget -O /etc/systemd/system/$ServerName.service https://raw.githubusercontent.com/Agile-Deliverance/MinecraftBedrockServer/master/minecraftbe.service
@@ -146,5 +151,5 @@ sed -i "/server-portv6=/c\server-portv6=$PortIPV6" server.properties
 sudo systemctl daemon-reload
 
 # Finished!
-echo "Setup is complete.  Starting Minecraft server..."
+echo "Setup is complete"
 
